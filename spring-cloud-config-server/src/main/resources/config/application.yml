@@ -17,6 +17,6 @@ spring:
       password: s3cr3t
 encrypt:
   keyStore:
-    location: classpath:/config-server.jks
-    password: my-s70r3-s3cr3t
+    location: classpath:/keystore/config-server.jks
+    password: haveaniceday
     alias: config-server-key
