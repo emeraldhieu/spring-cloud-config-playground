@@ -5,3 +5,17 @@ spring:
     active: dev
   config:
     import: "optional:configserver:http://root:s3cr3t@localhost:8888"
+
+# This config is needed.
+# Otherwise, the error "No decryption for FailsafeTextEncryptor. Did you configure the keystore correctly?" happens
+encrypt:
+  keyStore:
+    location: classpath:/keystore/config-server.jks
+    password: haveaniceday
+    alias: config-server-key
+    secret: haveaniceday
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.cloud.config: DEBUG

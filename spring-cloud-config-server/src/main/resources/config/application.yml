@@ -15,8 +15,15 @@ spring:
     user:
       name: root
       password: s3cr3t
+
 encrypt:
   keyStore:
     location: classpath:/keystore/config-server.jks
     password: haveaniceday
     alias: config-server-key
+    secret: haveaniceday
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.cloud.config:
